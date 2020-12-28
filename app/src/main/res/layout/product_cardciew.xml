@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:elevation="8dp"
+    android:layout_margin="@dimen/_10sdp"
+    android:id="@+id/card_view">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:id="@+id/image_layout"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pro_image"
+                android:scaleType="fitCenter"
+                android:background="@android:color/black"
+                />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="@style/CustomInverseProgressMid"
+                android:id="@+id/progress"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/pro_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="@dimen/_16ssp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@android:color/black"
+            android:text="Pizza"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:singleLine="true"
+            />
+
+
+        <TextView
+            android:id="@+id/pro_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:textColor="@android:color/darker_gray"
+            android:text="Go Back to where it all began with the classic cheese and tomato base"
+            android:textStyle="normal"
+            android:ellipsize="end"
+            android:lines="2"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:id="@+id/order"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+            android:text="60 usd"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TabLayout.text"
+            app:backgroundTint="@color/button_background"
+            android:layout_marginBottom="10dp"
+            android:insetBottom="0dp"
+            android:insetTop="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

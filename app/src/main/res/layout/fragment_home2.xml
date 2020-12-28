@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gturedi.views.StatefulLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/statefulLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Home">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey2"
+        app:layoutDescription="@xml/fragment_home2_scene">
+
+
+
+
+
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/slider_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorEnabled="true"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="@dimen/_1sdp"
+        app:sliderIndicatorSelectedColor="@color/blue2"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderScrollTimeInSec="1"
+
+        />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/slider_view"
+        android:background="@drawable/tab_background"
+        android:paddingTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/slider_view"
+        app:layout_scrollFlags="scroll"
+        app:tabGravity="start"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextAppearance="@style/TabLayout.text"
+        app:tabTextColor="@color/dark_blue">
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkOutButton"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        app:backgroundTint="@android:color/white"
+        app:icon="@drawable/ic_outline_shopping_cart_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="@dimen/_22sdp"
+        app:iconTint="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+
+
+        />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</com.gturedi.views.StatefulLayout>

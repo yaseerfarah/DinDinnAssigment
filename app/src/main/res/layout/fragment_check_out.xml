@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".View.CheckOut"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/grey2"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:weightSum="2"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/_10sdp"
+            android:id="@+id/backButton"
+            android:orientation="horizontal"
+            android:layout_weight="0.1"
+            >
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_baseline_arrow_back_ios_24"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_vertical"
+                android:text="@string/menu"
+
+                android:ellipsize="end"
+                android:singleLine="true"
+                />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_background"
+            android:paddingTop="@dimen/_5sdp"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@android:color/black"
+            app:tabTextAppearance="@style/TabLayout.text"
+            app:tabTextColor="@color/grey"
+            android:layout_weight="0"
+            android:paddingStart="@dimen/_10sdp"
+            >
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart"
+                android:id="@+id/packageT"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order"
+                android:id="@+id/commentsT"
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Information"
+                android:id="@+id/serviceT"
+                />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/_10sdp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/_10sdp"
+            android:background="@android:color/white"
+            >
+            <TextView
+                android:id="@+id/pro_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:textColor="@android:color/darker_gray"
+                android:text="@string/delivery_is_free"
+                android:textStyle="normal"
+                android:ellipsize="end"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_10sdp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/value"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalPrice"
+                    android:textSize="@dimen/_22ssp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_gravity="center_vertical"
+                    android:text="615 usd"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        app:backgroundTint="@android:color/white"
+        app:icon="@drawable/ic_baseline_credit_card_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="@dimen/_22sdp"
+        app:iconTint="@android:color/black"
+       android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:weightSum="2"
+    >
+
+    <RelativeLayout
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_weight="0"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:id="@+id/pro_image"
+            />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/CustomInverseProgress"
+            android:id="@+id/progress"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/pro_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:textColor="@android:color/black"
+        android:text="Pizza"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_weight="2"
+        />
+
+    <TextView
+        android:id="@+id/pro_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:textColor="@android:color/black"
+        android:text="60 usd"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_weight="1"
+        />
+
+    <ImageButton
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:background="@drawable/ic_baseline_close_24"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_weight="1"
+        android:id="@+id/close"
+        />
+
+</LinearLayout>

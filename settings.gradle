@@ -1,0 +1,3 @@
+include ':badgeviewlib'
+include ':app'
+rootProject.name = "DinDinnAssigment"
